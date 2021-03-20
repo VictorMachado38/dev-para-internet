@@ -21,12 +21,24 @@ public class ClienteController {
 
 
     }
+
+    //Não tem ID nesse metodo
     @PostMapping(path = "/add")
     public void  cadastrarCliente(@RequestBody Cliente cliente)
     {
         clienteRepository.save(cliente);
     }
 
-
+    //Eu posso um cliente com ID
+    @PutMapping(path = "/edit")
+    public void  esditarCliente(@RequestBody Cliente cliente)
+    {
+        clienteRepository.save(cliente);
+    }
+    @DeleteMapping(value = "delete/{id}")
+    public @ResponseBody void deleteCliente(@PathVariable(name = "id") long id)
+    {
+        clienteRepository.deleteById(id);
+    }
 
 }
