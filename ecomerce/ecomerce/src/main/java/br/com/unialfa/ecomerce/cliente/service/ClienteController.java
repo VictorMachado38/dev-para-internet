@@ -19,7 +19,6 @@ public class ClienteController {
 
         return clienteRepository.findAll();
 
-
     }
 
     //Não tem ID nesse metodo
@@ -40,5 +39,6 @@ public class ClienteController {
     {
         clienteRepository.deleteById(id);
     }
+
 
 }
