@@ -17,7 +17,7 @@ public class Cliente implements Serializable {
     private String nome;
     private String primeiroNome;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String cpf;
     private LocalDate dataNascimento;
     private int versao;

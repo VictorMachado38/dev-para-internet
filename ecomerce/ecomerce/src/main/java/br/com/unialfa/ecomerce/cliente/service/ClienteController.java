@@ -1,5 +1,6 @@
 package br.com.unialfa.ecomerce.cliente.service;
 
+import br.com.unialfa.ecomerce.cliente.business.ClieneteBusiness;
 import br.com.unialfa.ecomerce.cliente.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -11,34 +12,36 @@ import org.springframework.web.bind.annotation.*;
 public class ClienteController {
 
     @Autowired
-    private ClienteRepository clienteRepository;
+   private ClieneteBusiness clieneteBusiness;
 
    // @GetMapping(path = "/listall")
     @GetMapping(path = "/",produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Cliente> listarCliente(){
-
-        return clienteRepository.findAll();
-
+        return clieneteBusiness.listarCliente();
     }
 
     //Não tem ID nesse metodo
     @PostMapping(path = "/add")
     public void  cadastrarCliente(@RequestBody Cliente cliente)
     {
-        clienteRepository.save(cliente);
+
+
+            clieneteBusiness.cadastrarCliente(cliente);
+
+
     }
 
     //Eu posso um cliente com ID
     @PutMapping(path = "/edit")
-    public void  esditarCliente(@RequestBody Cliente cliente)
+    public void  editarCliente(@RequestBody Cliente cliente)
     {
-        clienteRepository.save(cliente);
+        clieneteBusiness.editarCliente(cliente);
     }
 
     @DeleteMapping(value = "delete/{id}")
     public @ResponseBody void deleteCliente(@PathVariable(name = "id") long id)
     {
-        clienteRepository.deleteById(id);
+        clieneteBusiness.deleteCliente(id);
     }
 
 
