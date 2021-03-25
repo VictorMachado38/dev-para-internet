@@ -34,11 +34,13 @@ public class ClienteController {
     {
         clienteRepository.save(cliente);
     }
+
     @DeleteMapping(value = "delete/{id}")
     public @ResponseBody void deleteCliente(@PathVariable(name = "id") long id)
     {
         clienteRepository.deleteById(id);
     }
+
 
 
 }
