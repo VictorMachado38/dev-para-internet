@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 
 @Entity
@@ -25,6 +26,9 @@ public class Pedido implements Serializable{
 
     @ManyToOne
     private Cliente cliente;
+
+    @OneToMany(mappedBy =  "id.pedido")
+    private List<ItensPedido> itenspedido ;
 
     public Pedido() {
     }
@@ -92,4 +96,6 @@ public class Pedido implements Serializable{
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
+
+
 }

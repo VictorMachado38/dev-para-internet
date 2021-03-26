@@ -14,11 +14,18 @@ public class PedidoController {
     @Autowired
     private PedidoRepository pedidoRepository;
 
-    @GetMapping(path = "/",produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Pedido> listarPedido(){
+    @GetMapping(path = "/{idCliente}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Pedido> listarPedido(@PathVariable Long idCliente){
+        Cliente cliente = new Cliente();
+        cliente.setId(idCliente);
+        return pedidoRepository.findAllByCliente(cliente);
+
+    }
+
+    @GetMapping(path = "/all",produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Pedido> listarTudosPedidos(){
 
         return pedidoRepository.findAll();
-
     }
 
     @PostMapping(path = "/add")
