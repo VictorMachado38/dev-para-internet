@@ -24,17 +24,17 @@ public class UsuarioCrontroller {
     }
 
     @PostMapping(path = "/add")
-    public void cadastrarPessoa(@RequestBody Usuario usuario) {
+    public void cadastrarUsuario(@RequestBody Usuario usuario) {
         usuarioRepository.save(usuario);
     }
 
     @PutMapping(path = "/edit")
-    public void editarPessoa(@RequestBody Usuario usuario) {
+    public void editarUsuario(@RequestBody Usuario usuario) {
         usuarioRepository.save(usuario);
     }
 
     @DeleteMapping(value = "delete/{id}")
-    public void deletePessoa(@PathVariable(name = "id") long id) {
+    public void deleteUsuario(@PathVariable(name = "id") long id) {
 
         usuarioRepository.deleteById(id);
     }

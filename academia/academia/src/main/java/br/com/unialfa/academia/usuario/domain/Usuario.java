@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
+// ESTOU NA DUVIDA SE USA o " implements Serializable " ou o "extends Pessoa" pois essa classe herda de pessoas
 public class Usuario extends Pessoa {
 
     @Id
