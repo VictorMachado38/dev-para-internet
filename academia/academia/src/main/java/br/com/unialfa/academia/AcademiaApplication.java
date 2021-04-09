@@ -2,6 +2,8 @@ package br.com.unialfa.academia;
 
 import br.com.unialfa.academia.pessoa.domain.Pessoa;
 import br.com.unialfa.academia.pessoa.repository.PessoaRepository;
+import br.com.unialfa.academia.usuario.domain.Usuario;
+import br.com.unialfa.academia.usuario.repository.UsuarioRepository;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -15,6 +17,9 @@ public class AcademiaApplication {
 
 	@Autowired
 	private PessoaRepository pessoaRepository;
+
+	@Autowired
+	private UsuarioRepository usuarioRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(AcademiaApplication.class, args);

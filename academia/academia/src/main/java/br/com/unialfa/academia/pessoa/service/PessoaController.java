@@ -1,5 +1,4 @@
 package br.com.unialfa.academia.pessoa.service;
-import java.util.List;
 
 import br.com.unialfa.academia.pessoa.domain.Pessoa;
 import br.com.unialfa.academia.pessoa.repository.PessoaRepository;
@@ -13,6 +12,7 @@ public class PessoaController {
 
     @Autowired
     private PessoaRepository pessoaRepository;
+
 
     @GetMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Pessoa> ListarPessoa(){
@@ -35,4 +35,5 @@ public class PessoaController {
 
         pessoaRepository.deleteById(id);
     }
+
 }
