@@ -1,29 +1,28 @@
 package br.com.unialfa.academia.professor.domain;
 
 import br.com.unialfa.academia.modalidade.domain.Modalidade;
+import br.com.unialfa.academia.pessoa.domain.Pessoa;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-public class Professor implements Serializable {
+public class Professor extends Pessoa implements Serializable {
 
-    @Id
+  /*  @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idProfessor;
-    //private List<Modalidade> Modalidade;
 
-
+*/
+    @OneToMany
+    private List<Modalidade> Modalidade;
 
     public Professor() {
         super();
     }
 
-
+/*
     public long getIdProfessor() {
         return idProfessor;
     }
@@ -31,10 +30,10 @@ public class Professor implements Serializable {
 
     public void setIdProfessor(long idProfessor) {
         this.idProfessor = idProfessor;
-    }
+    }*/
 
 
-   /* public List<Modalidade> getModalidade() {
+   public List<Modalidade> getModalidade() {
         return Modalidade;
     }
 
@@ -42,6 +41,6 @@ public class Professor implements Serializable {
     public void setModalidade(List<Modalidade> modalidade) {
         Modalidade = modalidade;
     }
-*/
+
 
 }

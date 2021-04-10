@@ -2,46 +2,59 @@ package br.com.unialfa.academia.aluno.domain;
 
 import br.com.unialfa.academia.pacote.domain.Pacote;
 import br.com.unialfa.academia.pessoa.domain.Pessoa;
+import br.com.unialfa.academia.turma.domain.Turma;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class Aluno implements Serializable {
+public class Aluno extends Pessoa implements Serializable {
 
-    @Id
+  /*  @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private long idAluno;
-    private int funcao;
+    */
 
+    private int matrcula;
 
-    //private Pacote Pacote;
+    @OneToOne
+    private Pacote Pacote;
 
+    @ManyToOne
+    private Turma turma;
 
+    public Turma getTurma() {
+        return turma;
+    }
 
+    public void setTurma(Turma turma) {
+        this.turma = turma;
+    }
 
-    public long getIdAluno() {
+    /* public long getIdAluno() {
         return idAluno;
     }
     public void setIdAluno(long idAluno) {
         this.idAluno = idAluno;
     }
-    public int getFuncao() {
-        return funcao;
+    */
+
+    public int getMatrcula() {
+        return matrcula;
     }
-    public void setFuncao(int funcao) {
-        this.funcao = funcao;
+
+    public void setMatrcula(int matrcula) {
+        this.matrcula = matrcula;
     }
-   /* public Pacote getPacote() {
+
+    public Pacote getPacote() {
         return Pacote;
     }
     public void setPacote(Pacote pacote) {
         Pacote = pacote;
     }
-*/
+
 
 
 }

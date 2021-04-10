@@ -1,9 +1,8 @@
 package br.com.unialfa.academia.plano.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import br.com.unialfa.academia.pacote.domain.Pacote;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
@@ -12,21 +11,33 @@ public class Plano implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long Plano;
+    private long idPlano;
     private String nomeDoPlano;
     private BigDecimal valor;
 
+    /*@OneToOne
+    private Pacote pacote;
 
+    public Pacote getPacote() {
+        return pacote;
+    }
+
+    public void setPacote(Pacote pacote) {
+        this.pacote = pacote;
+    }*/
 
     public Plano() {
         super();
     }
-    public long getPlano() {
-        return Plano;
+
+    public long getIdPlano() {
+        return idPlano;
     }
-    public void setPlano(long plano) {
-        Plano = plano;
+
+    public void setIdPlano(long idPlano) {
+        this.idPlano = idPlano;
     }
+
     public String getNomeDoPlano() {
         return nomeDoPlano;
     }

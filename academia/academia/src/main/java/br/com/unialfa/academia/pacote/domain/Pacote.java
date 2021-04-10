@@ -1,11 +1,9 @@
 package br.com.unialfa.academia.pacote.domain;
 
+import br.com.unialfa.academia.aluno.domain.Aluno;
 import br.com.unialfa.academia.plano.domain.Plano;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -17,8 +15,19 @@ public class Pacote  implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idPacote;
 
-    //private List<Plano> listaDePlanos;
+   // @OneToMany
+   // private List<Plano> listaDePlanos;
 
+    @OneToOne
+    private Aluno aluno;
+
+    public Aluno getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
 
     public long getIdPacote() {
         return idPacote;
@@ -26,7 +35,7 @@ public class Pacote  implements Serializable {
     public void setIdPacote(long idPacote) {
         this.idPacote = idPacote;
     }
-    /*public List<Plano> getListaDePlanos() {
+  /*  public List<Plano> getListaDePlanos() {
         return listaDePlanos;
     }
     public void setListaDePlanos(List<Plano> listaDePlanos) {

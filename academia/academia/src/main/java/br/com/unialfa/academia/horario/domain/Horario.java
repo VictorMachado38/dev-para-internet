@@ -1,9 +1,8 @@
 package br.com.unialfa.academia.horario.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import br.com.unialfa.academia.turma.domain.Turma;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -13,6 +12,17 @@ public class Horario implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idHorario;
     private String descHoario;
+
+    /*@OneToOne
+    private Turma turma;
+
+    public Turma getTurma() {
+        return turma;
+    }
+
+    public void setTurma(Turma turma) {
+        this.turma = turma;
+    }*/
 
     public long getIdHorario() {
         return idHorario;
