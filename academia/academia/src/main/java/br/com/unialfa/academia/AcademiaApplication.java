@@ -2,6 +2,7 @@ package br.com.unialfa.academia;
 
 import br.com.unialfa.academia.aluno.domain.Aluno;
 import br.com.unialfa.academia.aluno.repository.AlunoRepository;
+import br.com.unialfa.academia.funcionario.domain.Funcionario;
 import br.com.unialfa.academia.funcionario.repository.FuncionarioRepository;
 import br.com.unialfa.academia.horario.domain.Horario;
 import br.com.unialfa.academia.horario.repository.HorarioRepository;
@@ -15,6 +16,8 @@ import br.com.unialfa.academia.plano.domain.Plano;
 import br.com.unialfa.academia.plano.repository.PlanoRepository;
 import br.com.unialfa.academia.professor.domain.Professor;
 import br.com.unialfa.academia.professor.repository.ProfessorRepository;
+import br.com.unialfa.academia.salaDeAula.domain.salaDeAula;
+import br.com.unialfa.academia.salaDeAula.repository.salaDeAulaRepository;
 import br.com.unialfa.academia.turma.domain.Turma;
 import br.com.unialfa.academia.turma.repository.TurmaRepository;
 import br.com.unialfa.academia.usuario.domain.Usuario;
@@ -25,6 +28,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import br.com.unialfa.academia.salaDeAula.repository.salaDeAulaRepository;
 
 import javax.persistence.Id;
 import java.math.BigDecimal;
@@ -37,31 +41,27 @@ public class AcademiaApplication {
 
 	@Autowired
 	private PessoaRepository pessoaRepository;
-
 	@Autowired
 	private UsuarioRepository usuarioRepository;
-
 	@Autowired
 	private FuncionarioRepository funcionarioRepository;
-
 	@Autowired
 	private AlunoRepository alunoRepository;
-
 	@Autowired
 	private PacoteRepository pacoteRepository;
-
 	@Autowired
 	private ModalidadeRepository modalidadeRepository;
-
 	@Autowired
 	private PlanoRepository planoRepository;
-
 	@Autowired
 	private ProfessorRepository professorRepository;
 	@Autowired
 	private TurmaRepository turmaRepository;
 	@Autowired
 	private HorarioRepository horarioRepository;
+	@Autowired
+	private salaDeAulaRepository salaDeAulaRepository;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(AcademiaApplication.class, args);
@@ -102,9 +102,26 @@ public class AcademiaApplication {
 
 
 
+		Plano planoFut = new Plano();
+		planoFut.setNomeDoPlano("Fut Segunda a Sexta");
+		planoFut.setValor(BigDecimal.valueOf(250.00));
+		planoRepository.save(planoFut);
+
+
+		Plano planoHidro = new Plano();
+		planoHidro.setNomeDoPlano("Hidro todos os dias");
+		planoHidro.setValor(BigDecimal.valueOf(450.00));
+		planoRepository.save(planoHidro);
+
+
 		Modalidade modalidade = new Modalidade();
-		modalidade.setNome("Futbol");
+		modalidade.setNome("Futebol");
+		modalidade.setPlano(planoFut);
 		modalidadeRepository.save(modalidade);
+		Modalidade modalidade2 = new Modalidade();
+		modalidade2.setNome("Hidroginastica");
+		modalidade2.setPlano(planoHidro);
+		modalidadeRepository.save(modalidade2);
 
 		List<Modalidade> modelidadesDoProfessor = new ArrayList<>();
 		modelidadesDoProfessor.add(modalidade);
@@ -143,8 +160,63 @@ public class AcademiaApplication {
 		turmaRepository.save(turma);
 
 
+		salaDeAula sala = new salaDeAula();
+		sala.setNumero(1);
+		salaDeAulaRepository.save(sala);
+		salaDeAula sala2 = new salaDeAula();
+		sala2.setNumero(2);
+		salaDeAulaRepository.save(sala2);
 
 
+		Funcionario funcionario = new Funcionario();
+		funcionario.setNome("Funcionario Zelador");
+		funcionario.setDataNascimento(LocalDate.now());
+		funcionario.setEndereco("Rua so Funcionario Zelador");
+		funcionario.setTelefone("(62)98569-7458");
+		funcionario.setEmail("FuncionarioZelador@hotmail.com");
+		funcionario.setSexo('M');
+		funcionario.setDataCadastro(LocalDate.now());
+		funcionario.setDescFuncao("Zelador");
+		funcionarioRepository.save(funcionario);
+
+
+		Funcionario funcionario2 = new Funcionario();
+		funcionario2.setNome("Funcionario Recepcionista");
+		funcionario2.setDataNascimento(LocalDate.now());
+		funcionario2.setEndereco("Rua do Funcionario Recepcionista");
+		funcionario2.setTelefone("(62)98569-7458");
+		funcionario2.setEmail("FuncionarioRecepcionista@hotmail.com");
+		funcionario2.setSexo('M');
+		funcionario2.setDataCadastro(LocalDate.now());
+		funcionario2.setDescFuncao("Recepcionista");
+		funcionarioRepository.save(funcionario2);
+
+		Usuario usuario = new Usuario();
+		usuario.setNome("usuario 1");
+		usuario.setDataNascimento(LocalDate.now());
+		usuario.setEndereco("Rua so usuario");
+		usuario.setTelefone("(62)98569-7458");
+		usuario.setEmail("usuariousuario@hotmail.com");
+		usuario.setSexo('M');
+		usuario.setDataCadastro(LocalDate.now());
+		usuario.setUserName("ADMIN");
+		usuario.setSenha("admin!");
+		usuario.setNivel(2);
+		usuarioRepository.save(usuario);
+
+
+		Usuario usuario2 = new Usuario();
+		usuario2.setNome("usuario 2");
+		usuario2.setDataNascimento(LocalDate.now());
+		usuario2.setEndereco("Rua so usuario");
+		usuario2.setTelefone("(62)98569-7458");
+		usuario2.setEmail("usuario@hotmail.com");
+		usuario2.setSexo('M');
+		usuario2.setDataCadastro(LocalDate.now());
+		usuario2.setUserName("ADMIN");
+		usuario2.setSenha("admin!");
+		usuario2.setNivel(2);
+		usuarioRepository.save(usuario2);
 
 
 

@@ -1,9 +1,8 @@
 package br.com.unialfa.academia.modalidade.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import br.com.unialfa.academia.plano.domain.Plano;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -15,7 +14,16 @@ public class Modalidade  implements Serializable {
     private long idModalidade;
     private String nome;
 
+    @OneToOne
+     private Plano plano;
 
+    public Plano getPlano() {
+        return plano;
+    }
+
+    public void setPlano(Plano plano) {
+        this.plano = plano;
+    }
 
     public Modalidade() {
         super();

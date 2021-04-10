@@ -15,8 +15,8 @@ public class Pacote  implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idPacote;
 
-   // @OneToMany
-   // private List<Plano> listaDePlanos;
+   @OneToMany
+   private List<Plano> listaDePlanos;
 
     @OneToOne
     private Aluno aluno;
@@ -35,12 +35,12 @@ public class Pacote  implements Serializable {
     public void setIdPacote(long idPacote) {
         this.idPacote = idPacote;
     }
-  /*  public List<Plano> getListaDePlanos() {
+    public List<Plano> getListaDePlanos() {
         return listaDePlanos;
     }
     public void setListaDePlanos(List<Plano> listaDePlanos) {
         this.listaDePlanos = listaDePlanos;
-    }*/
+    }
 
 
 

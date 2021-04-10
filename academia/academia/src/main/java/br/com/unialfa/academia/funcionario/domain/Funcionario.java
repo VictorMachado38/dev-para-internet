@@ -10,12 +10,12 @@ import java.io.Serializable;
 
 @Entity
 // ESTOU NA DUVIDA SE USA o " implements Serializable " ou o "extends Pessoa" pois essa classe herda de pessoas
-public class Funcionario implements Serializable {
+public class Funcionario extends Pessoa implements Serializable {
 
 
-    @Id
+    /*@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long id;*/
     private String funcao;
     private String descFuncao;
 
@@ -24,12 +24,12 @@ public class Funcionario implements Serializable {
     public Funcionario() {
         super();
     }
-    public long getId() {
+   /* public long getId() {
         return id;
     }
     public void setId(long id) {
         this.id = id;
-    }
+    }*/
     public String getFuncao() {
         return funcao;
     }
