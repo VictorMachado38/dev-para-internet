@@ -11,7 +11,7 @@ public class Plano implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idPlano;
+    private long id;
     private String nomeDoPlano;
     private BigDecimal valor;
 
@@ -30,13 +30,13 @@ public class Plano implements Serializable {
         super();
     }
 
-    public long getIdPlano() {
-        return idPlano;
+   /* public long getId() {
+        return Id;
     }
 
-    public void setIdPlano(long idPlano) {
-        this.idPlano = idPlano;
-    }
+    public void setId(long id) {
+        this.Id = Id;
+    }*/
 
     public String getNomeDoPlano() {
         return nomeDoPlano;

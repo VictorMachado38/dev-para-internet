@@ -2,6 +2,7 @@ package br.com.unialfa.academia.turma.domain;
 
 import br.com.unialfa.academia.aluno.domain.Aluno;
 import br.com.unialfa.academia.horario.domain.Horario;
+import br.com.unialfa.academia.modalidade.domain.Modalidade;
 import br.com.unialfa.academia.professor.domain.Professor;
 
 import javax.persistence.*;
@@ -26,6 +27,17 @@ public class Turma implements Serializable {
     private Horario horario;
 
     private int vagas;
+
+    @OneToOne
+    private Modalidade modalidade;
+
+    public Modalidade getModalidade() {
+        return modalidade;
+    }
+
+    public void setModalidade(Modalidade modalidade) {
+        this.modalidade = modalidade;
+    }
 
     @OneToMany
     private List<Aluno> alunos;

@@ -157,6 +157,7 @@ public class AcademiaApplication {
 		turma.setHorario(horaio);
 		turma.setVagas(10);
 		turma.setAlunos(listAluno);
+		turma.setModalidade(modalidade);
 		turmaRepository.save(turma);
 
 
@@ -217,43 +218,6 @@ public class AcademiaApplication {
 		usuario2.setSenha("admin!");
 		usuario2.setNivel(2);
 		usuarioRepository.save(usuario2);
-
-
-
-
-
-/*
-		//Pacote pacote = new Pacote();
-
-
-
-		Modalidade atividade = new Modalidade();
-		atividade.setNome("Futbol");
-		modalidadeRepository.save(atividade);
-
-		Plano plano =new  Plano();
-	//	plano.setPacote(pacote);
-		plano.setNomeDoPlano("Plano 1");
-		plano.setValor(BigDecimal.valueOf(50.00));
-		planoRepository.save(plano);
-
-		//List<Plano> listaPlano = new ArrayList<>();
-	//	listaPlano.add(plano);
-
-
-		pacote.setAluno(aluno.getPacote().getAluno());
-		//pacote.setListaDePlanos(listaPlano);
-
-
-
-*/
-
-
-
-
-
-
-
 
 
 		return null;
