@@ -1,6 +1,7 @@
 package br.com.unialfa.academia.plano.domain;
 
-import br.com.unialfa.academia.pacote.domain.Pacote;
+import br.com.unialfa.academia.aluno.domain.Aluno;
+
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -15,16 +16,25 @@ public class Plano implements Serializable {
     private String nomeDoPlano;
     private BigDecimal valor;
 
-    /*@OneToOne
-    private Pacote pacote;
+    @OneToOne
+    private Aluno aluno;
 
-    public Pacote getPacote() {
-        return pacote;
+
+    public long getId() {
+        return id;
     }
 
-    public void setPacote(Pacote pacote) {
-        this.pacote = pacote;
-    }*/
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public Aluno getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
 
     public Plano() {
         super();

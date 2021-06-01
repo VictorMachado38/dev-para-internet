@@ -1,6 +1,6 @@
 package br.com.unialfa.academia.aluno.domain;
 
-import br.com.unialfa.academia.pacote.domain.Pacote;
+import br.com.unialfa.academia.plano.domain.Plano;
 import br.com.unialfa.academia.pessoa.domain.Pessoa;
 import br.com.unialfa.academia.turma.domain.Turma;
 
@@ -19,7 +19,7 @@ public class Aluno extends Pessoa implements Serializable {
     private int matrcula;
 
     @OneToOne
-    private Pacote Pacote;
+    private Plano plano;
 
     @ManyToOne
     private Turma turma;
@@ -48,6 +48,15 @@ public class Aluno extends Pessoa implements Serializable {
         this.matrcula = matrcula;
     }
 
+    public Plano getPlano() {
+        return plano;
+    }
+
+    public void setPlano(Plano plano) {
+        this.plano = plano;
+    }
+
+    /*
     public Pacote getPacote() {
         return Pacote;
     }
@@ -55,6 +64,6 @@ public class Aluno extends Pessoa implements Serializable {
         Pacote = pacote;
     }
 
-
+*/
 
 }

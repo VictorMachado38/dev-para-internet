@@ -1,0 +1,62 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+  <button mat-button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarText">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" hrouterLink="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link">Logout</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="Branco">
+      <!-- #docregion mat-menu-trigger-for -->
+      <button mat-button [matMenuTriggerFor]="menu">Turma</button>
+      <!-- #enddocregion mat-menu-trigger-for -->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item class="nav-link" routerLink="/turma">Listar</button>
+        <button mat-menu-item class="nav-link" routerLink="/cliente" >TESTE VAIII</button>
+      </mat-menu>
+
+    </div>
+
+    <div>
+
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cliente">Pessoas</a>
+
+        </li>
+      </ul>
+
+
+
+    </div>
+    <div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cliente-detalhe" >Cliente-Detalhe</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body>
+<div id="content" class="p-4 p-md-5 pt-5">
+  <router-outlet></router-outlet>
+</div>
+</body>

@@ -8,8 +8,7 @@ import br.com.unialfa.academia.horario.domain.Horario;
 import br.com.unialfa.academia.horario.repository.HorarioRepository;
 import br.com.unialfa.academia.modalidade.domain.Modalidade;
 import br.com.unialfa.academia.modalidade.repository.ModalidadeRepository;
-import br.com.unialfa.academia.pacote.domain.Pacote;
-import br.com.unialfa.academia.pacote.repository.PacoteRepository;
+
 import br.com.unialfa.academia.pessoa.domain.Pessoa;
 import br.com.unialfa.academia.pessoa.repository.PessoaRepository;
 import br.com.unialfa.academia.plano.domain.Plano;
@@ -47,8 +46,7 @@ public class AcademiaApplication {
 	private FuncionarioRepository funcionarioRepository;
 	@Autowired
 	private AlunoRepository alunoRepository;
-	@Autowired
-	private PacoteRepository pacoteRepository;
+
 	@Autowired
 	private ModalidadeRepository modalidadeRepository;
 	@Autowired
@@ -86,8 +84,9 @@ public class AcademiaApplication {
 
 
 		Aluno aluno = new Aluno();
-		Pacote pacote = new Pacote();
-		pacoteRepository.save(pacote);
+		Plano plano = new Plano();
+		plano.setValor(BigDecimal.valueOf(300.00));
+		planoRepository.save(plano);
 
 		aluno.setNome("Aluno 1");
 		aluno.setDataNascimento(LocalDate.now());
@@ -96,7 +95,7 @@ public class AcademiaApplication {
 		aluno.setEmail("aluno@hotmail.com");
 		aluno.setSexo('F');
 		aluno.setMatrcula(123456);
-		aluno.setPacote(pacote);
+		aluno.setPlano(plano);
 		aluno.setDataCadastro(LocalDate.now());
 		alunoRepository.save(aluno);
 
@@ -116,11 +115,11 @@ public class AcademiaApplication {
 
 		Modalidade modalidade = new Modalidade();
 		modalidade.setNome("Futebol");
-		modalidade.setPlano(planoFut);
+		//modalidade.setPlano(planoFut);
 		modalidadeRepository.save(modalidade);
 		Modalidade modalidade2 = new Modalidade();
 		modalidade2.setNome("Hidroginastica");
-		modalidade2.setPlano(planoHidro);
+	//	modalidade2.setPlano(planoHidro);
 		modalidadeRepository.save(modalidade2);
 
 		List<Modalidade> modelidadesDoProfessor = new ArrayList<>();
@@ -137,6 +136,21 @@ public class AcademiaApplication {
 		professor.setDataCadastro(LocalDate.now());
 		professor.setModalidade(modelidadesDoProfessor);
 		professorRepository.save(professor);
+
+
+		List<Modalidade> modelidadesDoProfessor2 = new ArrayList<>();
+		modelidadesDoProfessor2.add(modalidade2);
+
+		Professor professor2 = new Professor();
+		professor2.setNome("Professor 2 ");
+		professor2.setDataNascimento(LocalDate.now());
+		professor2.setEndereco("Rua do Professor 2");
+		professor2.setTelefone("(62)9888-7888");
+		professor2.setEmail("Professor@hotmail.com");
+		professor2.setSexo('M');
+		professor2.setDataCadastro(LocalDate.now());
+		professor2.setModalidade(modelidadesDoProfessor2);
+		professorRepository.save(professor2);
 
 
 		List<Aluno> listAluno = new ArrayList<>();
@@ -218,6 +232,7 @@ public class AcademiaApplication {
 		usuario2.setSenha("admin!");
 		usuario2.setNivel(2);
 		usuarioRepository.save(usuario2);
+
 
 
 		return null;

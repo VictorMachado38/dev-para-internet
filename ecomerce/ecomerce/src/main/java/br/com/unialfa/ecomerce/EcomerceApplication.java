@@ -80,6 +80,9 @@ public class EcomerceApplication {
 
 		produtoRepository.saveAll(listaProdutos);
 
+
+		//ALGUMA REFERENCIA NESSA PARTE DO COIDGO
+		/*
 		List<ItensPedido> itesnPedidos = new ArrayList<>();
 		ItensPedido itensPedido = new ItensPedido();
 		itensPedido.getId().setPedido(pedido);
@@ -91,6 +94,8 @@ public class EcomerceApplication {
 		itensPedido2.getId().setPedido(pedido);
 		itensPedido2.getId().setProduto(produto2);
 		itesnPedidos.add(itensPedido2);
+		*/
+
 
 
 		return  null;

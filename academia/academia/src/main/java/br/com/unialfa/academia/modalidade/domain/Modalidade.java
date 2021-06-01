@@ -13,7 +13,9 @@ public class Modalidade  implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idModalidade;
     private String nome;
+    private String descricao;
 
+    /*
     @OneToOne
      private Plano plano;
 
@@ -24,10 +26,19 @@ public class Modalidade  implements Serializable {
     public void setPlano(Plano plano) {
         this.plano = plano;
     }
+    */
 
-    public Modalidade() {
-        super();
+
+
+
+    public String getDescricao() {
+        return descricao;
     }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     public long getIdModalidade() {
         return idModalidade;
     }
