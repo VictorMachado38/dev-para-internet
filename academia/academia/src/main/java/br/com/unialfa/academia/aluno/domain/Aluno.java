@@ -16,7 +16,7 @@ public class Aluno extends Pessoa implements Serializable {
     private long idAluno;
     */
 
-    private int matrcula;
+    private int matricula;
 
     @OneToOne
     private Plano plano;
@@ -40,12 +40,12 @@ public class Aluno extends Pessoa implements Serializable {
     }
     */
 
-    public int getMatrcula() {
-        return matrcula;
+    public int getMatricula() {
+        return matricula;
     }
 
-    public void setMatrcula(int matrcula) {
-        this.matrcula = matrcula;
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
     }
 
     public Plano getPlano() {

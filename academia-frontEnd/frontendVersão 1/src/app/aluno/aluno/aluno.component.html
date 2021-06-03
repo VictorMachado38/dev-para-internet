@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-header">
     <h1>
-      Listagem de funcionaários
+      Listagem de alunos
     </h1>
   </div>
 
@@ -12,20 +12,33 @@
       <!-- id Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let funcionario"> {{funcionario.id}} </td>
+        <td mat-cell *matCellDef="let alunos"> {{alunos.id}} </td>
       </ng-container>
 
       <!-- Nome Column -->
       <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef> Nome </th>
-        <td mat-cell *matCellDef="let funcionario"> {{funcionario.nome}} </td>
-      </ng-container>+
-
-      <!-- Funcao Column -->
-      <ng-container matColumnDef="funcao">
-        <th mat-header-cell *matHeaderCellDef> Função </th>
-        <td mat-cell *matCellDef="let funcionario"> {{funcionario.funcao}} </td>
+        <td mat-cell *matCellDef="let alunos"> {{alunos.nome}} </td>
       </ng-container>
+
+      <!-- Matricula Column -->
+      <ng-container matColumnDef="matricula">
+        <th mat-header-cell *matHeaderCellDef> Matrícula </th>
+        <td mat-cell *matCellDef="let alunos"> {{alunos.matricula}} </td>
+      </ng-container>
+
+      <!-- Matricula Column -->
+      <ng-container matColumnDef="plano">
+        <th mat-header-cell *matHeaderCellDef> Plano  </th>
+        <td mat-cell *matCellDef="let alunos"> {{alunos.plano.nomeDoPlano | json }} </td>
+      </ng-container>
+
+      <!-- Matricula Column -->
+      <ng-container matColumnDef="valor">
+        <th mat-header-cell *matHeaderCellDef> Valor do plano  </th>
+        <td mat-cell *matCellDef="let alunos"> {{"R$: "+alunos.plano.valor + ",00"| json }} </td>
+      </ng-container>
+
 
       <!-- Ações -->
       <ng-container matColumnDef="acoes">

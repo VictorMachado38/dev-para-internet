@@ -14,7 +14,7 @@ import {environment} from '../../environments/environment';
 export class TurmaService {
 
   constructor(
-    private httpCliente: HttpClient,
+    private httpTurma: HttpClient,
     private snackbar: MatSnackBar
   ) { }
 
@@ -22,7 +22,7 @@ export class TurmaService {
 
   listarTurmas(): Observable<TurmaDto[]> {
     const url = `${environment.config.URL_API}/turma/` ;
-    return this.httpCliente.get<TurmaDto[]>(url).pipe(
+    return this.httpTurma.get<TurmaDto[]>(url).pipe(
       map((turmas) => turmas)
     );
   }

@@ -16,6 +16,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
 import { FucionarioComponent } from './funcionario/fucionario/fucionario.component';
+import { AlunoComponent } from './aluno/aluno/aluno.component';
+import { ProfessorComponent } from './professor/professor/professor.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -23,7 +25,9 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
   declarations: [
     AppComponent,
     TurmaComponent,
-    FucionarioComponent
+    FucionarioComponent,
+    AlunoComponent,
+    ProfessorComponent
   ],
   imports: [
     BrowserModule,

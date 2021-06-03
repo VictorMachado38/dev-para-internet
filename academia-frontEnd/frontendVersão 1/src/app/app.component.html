@@ -14,27 +14,63 @@
       </li>
     </ul>
 
+    <div class="Branco">
+      <!-- #docregion mat-menu-trigger-for -->
+      <button mat-button [matMenuTriggerFor]="menu1">Professor</button>
+      <!-- #enddocregion mat-menu-trigger-for -->
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item class="nav-link" routerLink="/professor">Listar</button>
+      </mat-menu>
+
+    </div>
 
     <div class="Branco">
       <!-- #docregion mat-menu-trigger-for -->
-      <button mat-button [matMenuTriggerFor]="menu">Turma</button>
+      <button mat-button [matMenuTriggerFor]="menu2">Aluno</button>
       <!-- #enddocregion mat-menu-trigger-for -->
-      <mat-menu #menu="matMenu">
+      <mat-menu #menu2="matMenu">
+        <button mat-menu-item class="nav-link" routerLink="/aluno">Listar alunos</button>
+      </mat-menu>
+
+    </div>
+
+
+
+    <div class="Branco">
+      <!-- #docregion mat-menu-trigger-for -->
+      <button mat-button [matMenuTriggerFor]="menu3">Funcionário</button>
+      <!-- #enddocregion mat-menu-trigger-for -->
+      <mat-menu #menu3="matMenu">
+        <button mat-menu-item class="nav-link" routerLink="/funcionario">Listar funcionários</button>
+      </mat-menu>
+
+    </div>
+
+    <div class="Branco">
+      <!-- #docregion mat-menu-trigger-for -->
+      <button mat-button [matMenuTriggerFor]="menu4">Turma</button>
+      <!-- #enddocregion mat-menu-trigger-for -->
+      <mat-menu #menu4="matMenu">
         <button mat-menu-item class="nav-link" routerLink="/turma">Listar</button>
         <button mat-menu-item class="nav-link" routerLink="/cliente" >TESTE VAIII</button>
       </mat-menu>
 
     </div>
 
+
+
     <div class="Branco">
       <!-- #docregion mat-menu-trigger-for -->
-      <button mat-button [matMenuTriggerFor]="menu2">Funcionário</button>
+      <button mat-button [matMenuTriggerFor]="menu10">Exemplo</button>
       <!-- #enddocregion mat-menu-trigger-for -->
-      <mat-menu #menu2="matMenu">
-        <button mat-menu-item class="nav-link" routerLink="/funcionario">Listaaaar</button>
+      <mat-menu #menu10="matMenu">
+        <button mat-menu-item class="nav-link" routerLink="/turma">Ex. 1</button>
+        <button mat-menu-item class="nav-link" routerLink="/cliente" >Ex. 2</button>
       </mat-menu>
 
     </div>
+
+
 
     <div>
       <ul class="navbar-nav mr-auto">

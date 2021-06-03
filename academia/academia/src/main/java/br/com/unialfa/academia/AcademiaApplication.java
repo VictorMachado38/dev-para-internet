@@ -85,16 +85,17 @@ public class AcademiaApplication {
 
 		Aluno aluno = new Aluno();
 		Plano plano = new Plano();
+		plano.setNomeDoPlano("Completo");
 		plano.setValor(BigDecimal.valueOf(300.00));
 		planoRepository.save(plano);
 
-		aluno.setNome("Aluno 1");
+		aluno.setNome("Gustavo souza");
 		aluno.setDataNascimento(LocalDate.now());
 		aluno.setEndereco("Rua do aluno");
 		aluno.setTelefone("(61)98569-5452");
 		aluno.setEmail("aluno@hotmail.com");
 		aluno.setSexo('F');
-		aluno.setMatrcula(123456);
+		aluno.setMatricula(123456);
 		aluno.setPlano(plano);
 		aluno.setDataCadastro(LocalDate.now());
 		alunoRepository.save(aluno);
