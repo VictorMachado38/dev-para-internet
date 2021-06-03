@@ -15,13 +15,15 @@ import { TurmaComponent } from './turma/turma/turma.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
+import { FucionarioComponent } from './funcionario/fucionario/fucionario.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
     AppComponent,
-    TurmaComponent
+    TurmaComponent,
+    FucionarioComponent
   ],
   imports: [
     BrowserModule,

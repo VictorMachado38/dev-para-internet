@@ -3,12 +3,14 @@ import {RouterModule, Routes} from '@angular/router';
 import {ClienteComponent} from './cliente/cliente.component';
 import {ClienteDeltalheComponent} from './cliente-deltalhe/cliente-deltalhe.component';
 import {TurmaComponent} from '../turma/turma/turma.component';
+import {FucionarioComponent} from '../funcionario/fucionario/fucionario.component';
 
 const clienteRoutes: Routes = [
   {path: 'cliente', component: ClienteComponent},
   {path: 'cliente-detalhe', component: ClienteDeltalheComponent},
   {path: 'cliente-detalhe/:id', component: ClienteDeltalheComponent},
-  {path: 'turma', component: TurmaComponent}
+  {path: 'turma', component: TurmaComponent},
+  {path: 'funcionario', component: FucionarioComponent}
 ];
 
 @NgModule({

@@ -184,26 +184,28 @@ public class AcademiaApplication {
 
 
 		Funcionario funcionario = new Funcionario();
-		funcionario.setNome("Funcionario Zelador");
+		funcionario.setNome("Roberto da silva");
 		funcionario.setDataNascimento(LocalDate.now());
 		funcionario.setEndereco("Rua so Funcionario Zelador");
 		funcionario.setTelefone("(62)98569-7458");
 		funcionario.setEmail("FuncionarioZelador@hotmail.com");
 		funcionario.setSexo('M');
 		funcionario.setDataCadastro(LocalDate.now());
-		funcionario.setDescFuncao("Zelador");
+		funcionario.setFuncao("Zelador");
+		funcionario.setDescFuncao("Promover a gestão dos funcionários para garantir o cumprimento dos afazeres de rotina, necessários para a conservação do empreendimento.1");
 		funcionarioRepository.save(funcionario);
 
 
 		Funcionario funcionario2 = new Funcionario();
-		funcionario2.setNome("Funcionario Recepcionista");
+		funcionario2.setNome("Rebeca medeiros");
 		funcionario2.setDataNascimento(LocalDate.now());
 		funcionario2.setEndereco("Rua do Funcionario Recepcionista");
 		funcionario2.setTelefone("(62)98569-7458");
 		funcionario2.setEmail("FuncionarioRecepcionista@hotmail.com");
 		funcionario2.setSexo('M');
 		funcionario2.setDataCadastro(LocalDate.now());
-		funcionario2.setDescFuncao("Recepcionista");
+		funcionario2.setFuncao("Recepcionista");
+		funcionario2.setDescFuncao("Responsável pelo atendimento ao público, seja recebendo a pessoa presencialmente na recepção de um estabelecimento ou pelo telefone e e-mail.");
 		funcionarioRepository.save(funcionario2);
 
 		Usuario usuario = new Usuario();
