@@ -57,6 +57,17 @@
 
     </div>
 
+    <div class="Branco">
+      <!-- #docregion mat-menu-trigger-for -->
+      <button mat-button [matMenuTriggerFor]="menu5">Modalidade</button>
+      <!-- #enddocregion mat-menu-trigger-for -->
+      <mat-menu #menu5="matMenu">
+        <button mat-menu-item class="nav-link" routerLink="/modalidade">Listar</button>
+        <button mat-menu-item class="nav-link" routerLink="/cliente" >TESTE VAIII</button>
+      </mat-menu>
+
+    </div>
+
 
 
     <div class="Branco">

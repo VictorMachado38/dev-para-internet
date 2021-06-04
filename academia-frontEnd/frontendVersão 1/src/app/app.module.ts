@@ -18,6 +18,7 @@ import {MatTableModule} from '@angular/material/table';
 import { FucionarioComponent } from './funcionario/fucionario/fucionario.component';
 import { AlunoComponent } from './aluno/aluno/aluno.component';
 import { ProfessorComponent } from './professor/professor/professor.component';
+import { ModalidadeComponent } from './modalidade/modalidade/modalidade.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -27,7 +28,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     TurmaComponent,
     FucionarioComponent,
     AlunoComponent,
-    ProfessorComponent
+    ProfessorComponent,
+    ModalidadeComponent
   ],
   imports: [
     BrowserModule,

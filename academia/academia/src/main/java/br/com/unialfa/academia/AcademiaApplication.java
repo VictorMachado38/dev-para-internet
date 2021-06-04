@@ -140,7 +140,7 @@ public class AcademiaApplication {
 
 
 		Professor professor = new Professor();
-		professor.setNome("Professor ");
+		professor.setNome("Jaime Rodirgues ");
 		professor.setDataNascimento(LocalDate.now());
 		professor.setEndereco("Rua do Professor ");
 		professor.setTelefone("(62)9888-7888");
@@ -155,7 +155,7 @@ public class AcademiaApplication {
 		modelidadesDoProfessor2.add(modalidade2);
 
 		Professor professor2 = new Professor();
-		professor2.setNome("Professor 2 ");
+		professor2.setNome("Marcos Alberto");
 		professor2.setDataNascimento(LocalDate.now());
 		professor2.setEndereco("Rua do Professor 2");
 		professor2.setTelefone("(62)9888-7888");
@@ -163,6 +163,7 @@ public class AcademiaApplication {
 		professor2.setSexo('M');
 		professor2.setDataCadastro(LocalDate.now());
 	//	professor2.setModalidade(modelidadesDoProfessor2);
+		professor2.setModalidade(modalidade2);
 		professorRepository.save(professor2);
 
 
