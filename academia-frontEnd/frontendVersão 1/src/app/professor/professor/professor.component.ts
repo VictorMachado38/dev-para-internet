@@ -32,7 +32,7 @@ export class ProfessorComponent implements OnInit {
 
 
   salvar(): void{
-
+    alert('VAIIII PFFF');
   }
 
 }

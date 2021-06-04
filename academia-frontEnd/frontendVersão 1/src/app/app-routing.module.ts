@@ -7,7 +7,8 @@ import {ModalidadeComponent} from './modalidade/modalidade/modalidade.component'
 const appRouts: Routes = [
   { path: 'home', component: ClienteComponent },
   {path: 'funcionario', component: FucionarioComponent},
-  {path: 'modalidade' , component: ModalidadeComponent}
+  {path: 'modalidade', component: ModalidadeComponent},
+
 ];
 
 

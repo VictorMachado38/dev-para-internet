@@ -128,10 +128,12 @@ public class AcademiaApplication {
 
 		Modalidade modalidade = new Modalidade();
 		modalidade.setNome("Futebol");
+		modalidade.setDescricao("Treino de futebol.");
 		//modalidade.setPlano(planoFut);
 		modalidadeRepository.save(modalidade);
 		Modalidade modalidade2 = new Modalidade();
 		modalidade2.setNome("Hidroginastica");
+		modalidade2.setDescricao("Aula de hidroginastica na piscina olimpica");
 	//	modalidade2.setPlano(planoHidro);
 		modalidadeRepository.save(modalidade2);
 

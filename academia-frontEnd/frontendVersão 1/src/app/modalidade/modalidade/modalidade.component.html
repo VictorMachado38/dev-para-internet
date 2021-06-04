@@ -1,1 +1,49 @@
-<p>modalidade works!</p>
+<div class="card">
+  <div class="card-header">
+    <h1>
+      Listagem de Modalidades
+    </h1>
+  </div>
+
+  <br>
+
+  <div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!-- id Column -->
+      <ng-container matColumnDef="id_modalidade">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let modalidade"> {{modalidade.idModalidade}} </td>
+      </ng-container>
+
+      <!-- Nome Column -->
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let modalidade"> {{modalidade.nome}} </td>
+      </ng-container>
+
+      <!-- Descricao Column -->
+      <ng-container matColumnDef="descricao">
+        <th mat-header-cell *matHeaderCellDef> Descrição </th>
+        <td mat-cell *matCellDef="let modalidade"> {{modalidade.descricao }} </td>
+      </ng-container>
+
+
+
+      <!-- Ações -->
+      <ng-container matColumnDef="acoes">
+        <th mat-header-cell *matHeaderCellDef> AÇÕES </th>
+        <td mat-cell *matCellDef="let cliente">
+          <button mat-button color="primary" >Editar</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <hr>
+    <button mat-stroked-button color="primary" (click)="salvar()">Salvar</button>
+  </div>
+</div>

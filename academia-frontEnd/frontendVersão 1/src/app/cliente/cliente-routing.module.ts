@@ -6,6 +6,9 @@ import {TurmaComponent} from '../turma/turma/turma.component';
 import {FucionarioComponent} from '../funcionario/fucionario/fucionario.component';
 import {AlunoComponent} from '../aluno/aluno/aluno.component';
 import {ProfessorComponent} from '../professor/professor/professor.component';
+import {ModalidadeComponent} from '../modalidade/modalidade/modalidade.component';
+import {PlanoComponent} from '../plano/plano/plano.component';
+import {SalaDeAulaComponent} from '../salaDeAula/sala-de-aula/sala-de-aula.component';
 
 const clienteRoutes: Routes = [
   {path: 'cliente', component: ClienteComponent},
@@ -14,7 +17,11 @@ const clienteRoutes: Routes = [
   {path: 'turma', component: TurmaComponent},
   {path: 'funcionario', component: FucionarioComponent},
   {path: 'aluno', component: AlunoComponent},
-  {path: 'professor', component: ProfessorComponent}
+  {path: 'professor', component: ProfessorComponent},
+  {path: 'modalidade', component: ModalidadeComponent},
+  {path: 'plano' , component: PlanoComponent},
+  {path: 'salaDeAula', component: SalaDeAulaComponent}
+
 ];
 
 @NgModule({

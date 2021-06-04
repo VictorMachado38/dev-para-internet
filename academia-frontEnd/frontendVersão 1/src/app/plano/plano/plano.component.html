@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-header">
     <h1>
-      Listagem de Turmas
+      Listagem de Planos
     </h1>
   </div>
 
@@ -16,24 +16,17 @@
       </ng-container>
 
       <!-- Nome Column -->
-      <ng-container matColumnDef="nome">
-        <th mat-header-cell *matHeaderCellDef> Nome </th>
-        <td mat-cell *matCellDef="let turma"> {{turma.nome}} </td>
+      <ng-container matColumnDef="nomeDoPlano">
+        <th mat-header-cell *matHeaderCellDef> Plano </th>
+        <td mat-cell *matCellDef="let turma"> {{turma.nomeDoPlano}} </td>
       </ng-container>
 
       <!-- Professor Column -->
-      <ng-container matColumnDef="professor">
-        <th mat-header-cell *matHeaderCellDef> professor </th>
-        <td mat-cell *matCellDef="let turma"> {{turma.professor.nome | json}} </td>
+      <ng-container matColumnDef="valor">
+        <th mat-header-cell *matHeaderCellDef> Valor </th>
+        <td mat-cell *matCellDef="let turma"> {{"R$:" + turma.valor + ",00"}} </td>
       </ng-container>
 
-
-
-      <!-- email Column -->
-      <ng-container matColumnDef="modalidade">
-        <th mat-header-cell *matHeaderCellDef> Modalidade </th>
-        <td mat-cell *matCellDef="let turma"> {{turma.modalidade.nome | json}} </td>
-      </ng-container>
 
 
       <!-- Ações -->

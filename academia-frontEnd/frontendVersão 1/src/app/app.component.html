@@ -10,7 +10,7 @@
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" hrouterLink="/home">Home <span class="sr-only">(current)</span></a>
+      <!--  <a class="nav-link" hrouterLink="/home">Home <span class="sr-only">(current)</span></a> -->
       </li>
     </ul>
 
@@ -68,6 +68,28 @@
 
     </div>
 
+
+    <div class="Branco">
+      <!-- #docregion mat-menu-trigger-for -->
+      <button mat-button [matMenuTriggerFor]="menu6">Plano</button>
+      <!-- #enddocregion mat-menu-trigger-for -->
+      <mat-menu #menu6="matMenu">
+        <button mat-menu-item class="nav-link" routerLink="/plano">Listar</button>
+        <button mat-menu-item class="nav-link" routerLink="/cliente" >TESTE VAIII</button>
+      </mat-menu>
+
+    </div>
+
+    <div class="Branco">
+      <!-- #docregion mat-menu-trigger-for -->
+      <button mat-button [matMenuTriggerFor]="menu7">Sala de aula</button>
+      <!-- #enddocregion mat-menu-trigger-for -->
+      <mat-menu #menu7="matMenu">
+        <button mat-menu-item class="nav-link" routerLink="/salaDeAula">Listar</button>
+        <button mat-menu-item class="nav-link" routerLink="/cliente" >TESTE VAIII</button>
+      </mat-menu>
+
+    </div>
 
 
     <div class="Branco">

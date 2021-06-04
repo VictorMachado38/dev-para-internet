@@ -19,6 +19,8 @@ import { FucionarioComponent } from './funcionario/fucionario/fucionario.compone
 import { AlunoComponent } from './aluno/aluno/aluno.component';
 import { ProfessorComponent } from './professor/professor/professor.component';
 import { ModalidadeComponent } from './modalidade/modalidade/modalidade.component';
+import { PlanoComponent } from './plano/plano/plano.component';
+import { SalaDeAulaComponent } from './salaDeAula/sala-de-aula/sala-de-aula.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -29,7 +31,9 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     FucionarioComponent,
     AlunoComponent,
     ProfessorComponent,
-    ModalidadeComponent
+    ModalidadeComponent,
+    PlanoComponent,
+    SalaDeAulaComponent
   ],
   imports: [
     BrowserModule,
