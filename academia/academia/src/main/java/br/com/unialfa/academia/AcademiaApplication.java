@@ -94,11 +94,23 @@ public class AcademiaApplication {
 		aluno.setEndereco("Rua do aluno");
 		aluno.setTelefone("(61)98569-5452");
 		aluno.setEmail("aluno@hotmail.com");
-		aluno.setSexo('F');
+		aluno.setSexo('M');
 		aluno.setMatricula(123456);
 		aluno.setPlano(plano);
 		aluno.setDataCadastro(LocalDate.now());
 		alunoRepository.save(aluno);
+
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome("Pablo esobar");
+		aluno2.setDataNascimento(LocalDate.now());
+		aluno2.setEndereco("Rua do aluno");
+		aluno2.setTelefone("(61)98569-5452");
+		aluno2.setEmail("aluno2@hotmail.com");
+		aluno2.setSexo('M');
+		aluno2.setMatricula(123456);
+		aluno2.setPlano(plano);
+		aluno2.setDataCadastro(LocalDate.now());
+		alunoRepository.save(aluno2);
 
 
 
@@ -135,7 +147,7 @@ public class AcademiaApplication {
 		professor.setEmail("Professor@hotmail.com");
 		professor.setSexo('M');
 		professor.setDataCadastro(LocalDate.now());
-		professor.setModalidade(modelidadesDoProfessor);
+		professor.setModalidade(modalidade);
 		professorRepository.save(professor);
 
 
@@ -150,7 +162,7 @@ public class AcademiaApplication {
 		professor2.setEmail("Professor@hotmail.com");
 		professor2.setSexo('M');
 		professor2.setDataCadastro(LocalDate.now());
-		professor2.setModalidade(modelidadesDoProfessor2);
+	//	professor2.setModalidade(modelidadesDoProfessor2);
 		professorRepository.save(professor2);
 
 

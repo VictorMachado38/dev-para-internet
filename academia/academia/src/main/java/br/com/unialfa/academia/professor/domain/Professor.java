@@ -15,8 +15,8 @@ public class Professor extends Pessoa implements Serializable {
     private long idProfessor;
 
 */
-    @OneToMany
-    private List<Modalidade> Modalidade;
+    @OneToOne
+    private Modalidade Modalidade;
 
     public Professor() {
         super();
@@ -32,7 +32,7 @@ public class Professor extends Pessoa implements Serializable {
         this.idProfessor = idProfessor;
     }*/
 
-
+/*
    public List<Modalidade> getModalidade() {
         return Modalidade;
     }
@@ -42,5 +42,13 @@ public class Professor extends Pessoa implements Serializable {
         Modalidade = modalidade;
     }
 
+*/
 
+    public br.com.unialfa.academia.modalidade.domain.Modalidade getModalidade() {
+        return Modalidade;
+    }
+
+    public void setModalidade(br.com.unialfa.academia.modalidade.domain.Modalidade modalidade) {
+        Modalidade = modalidade;
+    }
 }
