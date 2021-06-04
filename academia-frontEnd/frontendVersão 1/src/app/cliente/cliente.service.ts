@@ -24,6 +24,7 @@ export class ClienteService {
        map((pessoas) => pessoas)
      );
    }
+
    salvarCliente(cliente: ClienteDto): Observable<ClienteDto>{
      const url = `${environment.config.URL_API}/pessoa/add` ;
      return this.httpCliente.post<ClienteDto>(url, cliente).pipe(

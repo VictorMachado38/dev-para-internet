@@ -1,6 +1,11 @@
 export class ProfessorDto{
   id: number;
   nome: string;
-  modalidade: string;
+  dataNascimento: Date;
+  endereco: string;
+  telefone: string;
+  email: string;
+  sexo: string;
+  dataCadastro: Date;
 
 }

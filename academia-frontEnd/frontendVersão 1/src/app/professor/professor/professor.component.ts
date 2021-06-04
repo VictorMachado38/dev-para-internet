@@ -31,8 +31,16 @@ export class ProfessorComponent implements OnInit {
   }
 
 
+  //esse salvar é o salver que mostra na tela de listagem
   salvar(): void{
     alert('VAIIII PFFF');
+  }
+
+  editarProfessor(): void{
+
+  }
+  deletarProfessor(professor: ProfessorDto): void {
+    this.professorService.deletarPrefessores(professor.id);
   }
 
 }

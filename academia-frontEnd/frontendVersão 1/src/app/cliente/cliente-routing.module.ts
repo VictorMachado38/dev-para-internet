@@ -9,6 +9,9 @@ import {ProfessorComponent} from '../professor/professor/professor.component';
 import {ModalidadeComponent} from '../modalidade/modalidade/modalidade.component';
 import {PlanoComponent} from '../plano/plano/plano.component';
 import {SalaDeAulaComponent} from '../salaDeAula/sala-de-aula/sala-de-aula.component';
+import {ProfessorDetalheComponent} from '../professor/professor-detalhe/professor-detalhe.component';
+import {AunoDetalheComponent} from '../aluno/auno-detalhe/auno-detalhe.component';
+import {FuncionarioDetalheComponent} from '../funcionario/funcionario-detalhe/funcionario-detalhe.component';
 
 const clienteRoutes: Routes = [
   {path: 'cliente', component: ClienteComponent},
@@ -20,7 +23,13 @@ const clienteRoutes: Routes = [
   {path: 'professor', component: ProfessorComponent},
   {path: 'modalidade', component: ModalidadeComponent},
   {path: 'plano' , component: PlanoComponent},
-  {path: 'salaDeAula', component: SalaDeAulaComponent}
+  {path: 'salaDeAula', component: SalaDeAulaComponent},
+  {path: 'professorDetalhe', component: ProfessorDetalheComponent},
+  {path: 'professorDetalhe/:id', component: ProfessorDetalheComponent},
+  {path: 'alunoDetalhe', component: AunoDetalheComponent},
+  {path: 'alunoDetalhe/:id', component: AunoDetalheComponent},
+  {path: 'funcionarioDetalhe', component: FuncionarioDetalheComponent},
+  {path: 'funcionarioDetalhe/:id', component: FuncionarioDetalheComponent}
 
 ];
 

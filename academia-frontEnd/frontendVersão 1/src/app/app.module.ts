@@ -21,6 +21,13 @@ import { ProfessorComponent } from './professor/professor/professor.component';
 import { ModalidadeComponent } from './modalidade/modalidade/modalidade.component';
 import { PlanoComponent } from './plano/plano/plano.component';
 import { SalaDeAulaComponent } from './salaDeAula/sala-de-aula/sala-de-aula.component';
+import { ProfessorDetalheComponent } from './professor/professor-detalhe/professor-detalhe.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { AunoDetalheComponent } from './aluno/auno-detalhe/auno-detalhe.component';
+import { FuncionarioDetalheComponent } from './funcionario/funcionario-detalhe/funcionario-detalhe.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -33,7 +40,10 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     ProfessorComponent,
     ModalidadeComponent,
     PlanoComponent,
-    SalaDeAulaComponent
+    SalaDeAulaComponent,
+    ProfessorDetalheComponent,
+    AunoDetalheComponent,
+    FuncionarioDetalheComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +58,11 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     ClienteRoutingModule,
     MatButtonModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

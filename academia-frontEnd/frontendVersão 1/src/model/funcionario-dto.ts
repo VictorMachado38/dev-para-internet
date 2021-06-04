@@ -5,4 +5,11 @@ export class FuncionarioDto{
   funcao: string;
   descFuncao: string;
 
+  dataNascimento: Date;
+  endereco: string;
+  telefone: string;
+
+  sexo: string;
+  dataCadastro: Date;
+
 }
