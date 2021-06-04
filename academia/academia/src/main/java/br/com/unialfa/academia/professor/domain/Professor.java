@@ -15,6 +15,7 @@ public class Professor extends Pessoa implements Serializable {
     private long idProfessor;
 
 */
+    //@OneToMany
     @OneToOne
     private Modalidade Modalidade;
 
