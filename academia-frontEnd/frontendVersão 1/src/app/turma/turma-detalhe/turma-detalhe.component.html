@@ -1,0 +1,58 @@
+<div class="card">
+  <div class="card-header">
+    Adicionar de Turma:
+  </div>
+  <div class="card-body">
+    <div class="card-container">
+      <div>
+        <form [formGroup]="formTurma" (ngSubmit)="onSubmit"  class="form-exemplo">
+          <div style="display: none">
+            <mat-form-field class="example-full-width">
+              <mat-label>ID</mat-label>
+              <input matInput  formControlName="id">
+            </mat-form-field>
+          </div>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Nome da turma</mat-label>
+            <input type="text" matInput placeholder="Ex. Turma 6" formControlName="nome"
+                   [errorStateMatcher]="matcher"
+                   required>
+            <mat-error *ngIf="getControl.nome.hasError('nome') && !getControl.nome.hasError('required')">
+              por favor entre com nome válido!
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Maximo de alunos</mat-label>
+            <input type="number" matInput placeholder="Ex. 50" formControlName="maxAluno"
+                   [errorStateMatcher]="matcher"
+                   required>
+            <mat-error *ngIf="getControl.nome.hasError('nome') && !getControl.nome.hasError('required')">
+              por favor entre com a quantidade maxima de alunos!
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Horário</mat-label>
+            <input type="text" matInput placeholder="Ex. 10:00H as 11:00H" formControlName="horario"
+                   [errorStateMatcher]="matcher"
+                   required>
+            <mat-error *ngIf="getControl.nome.hasError('nome') && !getControl.nome.hasError('required')">
+              por favor entre com horario válido!
+            </mat-error>
+          </mat-form-field>
+
+          <hr>
+
+          <button mat-button type="submit" (click)="onSubmit()" color="primary"> Salvar </button>
+
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

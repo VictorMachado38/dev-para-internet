@@ -12,6 +12,10 @@ import {SalaDeAulaComponent} from '../salaDeAula/sala-de-aula/sala-de-aula.compo
 import {ProfessorDetalheComponent} from '../professor/professor-detalhe/professor-detalhe.component';
 import {AunoDetalheComponent} from '../aluno/auno-detalhe/auno-detalhe.component';
 import {FuncionarioDetalheComponent} from '../funcionario/funcionario-detalhe/funcionario-detalhe.component';
+import {TurmaDetalheComponent} from '../turma/turma-detalhe/turma-detalhe.component';
+import {ModalidadeDetalheComponent} from '../modalidade/modalidade-detalhe/modalidade-detalhe.component';
+import {SalaDeAulaDetalheComponent} from '../salaDeAula/sala-de-aula-detalhe/sala-de-aula-detalhe.component';
+import {PlanoDetalheComponent} from '../plano/plano-detalhe/plano-detalhe.component';
 
 const clienteRoutes: Routes = [
   {path: 'cliente', component: ClienteComponent},
@@ -29,7 +33,15 @@ const clienteRoutes: Routes = [
   {path: 'alunoDetalhe', component: AunoDetalheComponent},
   {path: 'alunoDetalhe/:id', component: AunoDetalheComponent},
   {path: 'funcionarioDetalhe', component: FuncionarioDetalheComponent},
-  {path: 'funcionarioDetalhe/:id', component: FuncionarioDetalheComponent}
+  {path: 'funcionarioDetalhe/:id', component: FuncionarioDetalheComponent},
+  {path: 'turmaDetalhe', component: TurmaDetalheComponent},
+  {path: 'turmaDetalhe/:id', component: TurmaDetalheComponent},
+  {path: 'modalidadeDetalhe', component: ModalidadeDetalheComponent},
+  {path: 'modalidadeDetalhe/:id', component: ModalidadeDetalheComponent},
+  {path: 'salaDeAulaDetalhe', component: SalaDeAulaDetalheComponent},
+  {path: 'salaDeAulaDetalhe/:id', component: SalaDeAulaDetalheComponent},
+  {path: 'planoDetalhe', component: PlanoDetalheComponent},
+  {path: 'planoDetalhe/:id', component: PlanoDetalheComponent}
 
 ];
 

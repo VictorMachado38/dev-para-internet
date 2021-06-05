@@ -28,6 +28,10 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { AunoDetalheComponent } from './aluno/auno-detalhe/auno-detalhe.component';
 import { FuncionarioDetalheComponent } from './funcionario/funcionario-detalhe/funcionario-detalhe.component';
+import { TurmaDetalheComponent } from './turma/turma-detalhe/turma-detalhe.component';
+import { ModalidadeDetalheComponent } from './modalidade/modalidade-detalhe/modalidade-detalhe.component';
+import { SalaDeAulaDetalheComponent } from './salaDeAula/sala-de-aula-detalhe/sala-de-aula-detalhe.component';
+import { PlanoDetalheComponent } from './plano/plano-detalhe/plano-detalhe.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -43,7 +47,11 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     SalaDeAulaComponent,
     ProfessorDetalheComponent,
     AunoDetalheComponent,
-    FuncionarioDetalheComponent
+    FuncionarioDetalheComponent,
+    TurmaDetalheComponent,
+    ModalidadeDetalheComponent,
+    SalaDeAulaDetalheComponent,
+    PlanoDetalheComponent
   ],
   imports: [
     BrowserModule,

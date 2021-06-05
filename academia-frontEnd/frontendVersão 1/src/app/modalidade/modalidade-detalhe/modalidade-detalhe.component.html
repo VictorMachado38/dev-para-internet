@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="card-header">
+    Adicionar de Modalidade:
+  </div>
+  <div class="card-body">
+    <div class="card-container">
+      <div>
+        <form [formGroup]="formModalidade" (ngSubmit)="onSubmit"  class="form-exemplo">
+          <div style="display: none">
+            <mat-form-field class="example-full-width">
+              <mat-label>ID</mat-label>
+              <input matInput  formControlName="id">
+            </mat-form-field>
+          </div>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Nome da modalidade</mat-label>
+            <input type="text" matInput placeholder="Ex. Futebol" formControlName="nome"
+                   [errorStateMatcher]="matcher"
+                   required>
+            <mat-error *ngIf="getControl.nome.hasError('nome') && !getControl.nome.hasError('required')">
+              por favor entre com uma malidade válida!
+            </mat-error>
+          </mat-form-field>
+
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Descrição da molidade</mat-label>
+            <input type="text" matInput placeholder="Ex. Aula e ping pong Nivel: Profissional" formControlName="descricao"
+                   [errorStateMatcher]="matcher"
+                   required>
+            <mat-error *ngIf="getControl.nome.hasError('nome') && !getControl.nome.hasError('required')">
+              por favor entre com descrição da molidade válida!
+            </mat-error>
+          </mat-form-field>
+
+          <hr>
+
+          <button mat-button type="submit" (click)="onSubmit()" color="primary"> Salvar </button>
+
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

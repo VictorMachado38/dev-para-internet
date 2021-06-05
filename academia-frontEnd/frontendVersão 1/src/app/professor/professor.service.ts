@@ -60,7 +60,7 @@ export class ProfessorService {
   }
 
   editarProessor(professor: ProfessorDto): Observable<ProfessorDto>{
-    const url = `${environment.config.URL_API}/cliente/edit` ;
+    const url = `${environment.config.URL_API}/professor/edit` ;
     return this.httpProfessor.put<ProfessorDto>(url, professor).pipe(
       map(obj => obj),
       catchError( (e) => this.errorHandler(e))

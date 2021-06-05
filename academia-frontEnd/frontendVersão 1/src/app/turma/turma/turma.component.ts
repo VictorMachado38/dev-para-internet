@@ -19,7 +19,8 @@ export class TurmaComponent implements OnInit {
     private router: Router
   ) { }
 
-  displayedColumns: string[] = ['id', 'nome', 'professor', 'modalidade' , 'acoes' ];
+  //displayedColumns: string[] = ['id', 'nome', 'maxAluno', 'modalidade' , 'professor' , 'acoes' ];
+  displayedColumns: string[] = ['id', 'nome',  'horario' , 'acoes' ];
 
   turmas: TurmaDto[];
   dataSource;

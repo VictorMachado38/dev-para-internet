@@ -23,9 +23,11 @@ public class Turma implements Serializable {
 
     private int maxAluno;
 
+    /*
     @OneToOne
     private Horario horario;
-
+*/
+    private String horario;
     private int vagas;
 
     @OneToOne
@@ -97,12 +99,22 @@ public class Turma implements Serializable {
     public void setVagas(int vagas) {
         this.vagas = vagas;
     }
-
+/*
    public Horario getHorario() {
         return horario;
     }
 
     public void setHorario(Horario horario) {
+        this.horario = horario;
+    }
+
+ */
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
         this.horario = horario;
     }
 

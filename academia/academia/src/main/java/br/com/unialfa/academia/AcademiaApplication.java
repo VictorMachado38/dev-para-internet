@@ -184,7 +184,7 @@ public class AcademiaApplication {
 		turma.setNome("Turma 1");
 		turma.setProfessor(professor);
 		turma.setMaxAluno(30);
-		turma.setHorario(horaio);
+		turma.setHorario("8:00H as 9:00H");
 		turma.setVagas(10);
 		turma.setAlunos(listAluno);
 		turma.setModalidade(modalidade);

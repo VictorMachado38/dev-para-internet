@@ -3,5 +3,7 @@ export class TurmaDto {
   nome: string;
   Professor: string;
   vagas: number;
+  maxAluno: number;
+  horario: string;
 
 }
